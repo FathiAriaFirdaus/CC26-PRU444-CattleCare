@@ -215,7 +215,7 @@ function Deteksi() {
     // ──────────────────────────────────────────────────────────────────────
 
     try {
-      const response = await fetch(`${API_URL}/predict`, { method: 'POST', body: fd });
+      const response = await fetch(`${API_URL}/predict`, { method: 'POST', body: fd, headers: { 'ngrok-skip-browser-warning': 'true' } });
       if (!response.ok) {
         const err = await response.json().catch(() => ({ error: `HTTP ${response.status}` }));
         throw new Error(err.error || `Server error ${response.status}`);
