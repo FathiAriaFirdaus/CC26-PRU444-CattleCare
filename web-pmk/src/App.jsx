@@ -7,14 +7,12 @@ import Riwayat from './pages/Riwayat';
 function App() {
   return (
     <BrowserRouter>
-      <div style={{ padding: '20px', fontFamily: 'sans-serif' }}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/deteksi" element={<Deteksi />} />
-          <Route path="/hasil" element={<Hasil />} />
-          <Route path="/riwayat" element={<Riwayat />} />
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/deteksi" element={<Deteksi />} />
+        <Route path="/hasil" element={<Hasil />} />
+        <Route path="/riwayat" element={<Riwayat />} />
+      </Routes>
     </BrowserRouter>
   );
 }
