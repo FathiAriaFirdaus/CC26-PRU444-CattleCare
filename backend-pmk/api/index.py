@@ -20,10 +20,10 @@ def add_ngrok_header(response):
     return response
 
 # ── Load model & artefak ───────────────────────────────────────────────────────
-cnn_model = tf.keras.models.load_model('fmd_cnn_best_model.h5')
-ann_model = tf.keras.models.load_model('model_pmk_ann.h5')
+cnn_model = tf.keras.models.load_model('./fmd_cnn_best_model.h5')
+ann_model = tf.keras.models.load_model('./model_pmk_ann.h5')
 
-with open('kolom_fitur_pmk.pkl', 'rb') as f:
+with open('./kolom_fitur_pmk.pkl', 'rb') as f:
     kolom_fitur = pickle.load(f)
 
 # ── Scaling constants (dari notebook) ─────────────────────────────────────────
