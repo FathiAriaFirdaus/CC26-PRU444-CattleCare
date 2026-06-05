@@ -232,6 +232,9 @@ def delete_riwayat(id):
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
+@app.route('/', methods=['GET'])
+def home():
+    return 'Backend API Running'
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
