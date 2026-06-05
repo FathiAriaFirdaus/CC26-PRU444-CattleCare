@@ -236,5 +236,5 @@ def delete_riwayat(id):
 def home():
     return 'Backend API Running'
 
-if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+# if __name__ == '__main__':
+#     app.run(debug=True, port=5000)
